@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 # Absolute path example
-data = pd.read_csv("Notebook/recipe_final (1).csv")
+data = pd.read_csv('recipe_final.csv')
 
 
 # Preprocess Ingredients
@@ -42,9 +42,18 @@ def truncate(text, length):
         return text[:length] + "..."
     else:
         return text
+    
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/login', methods=['GET'])
+def login():
+    return render_template('login.html')
+
+@app.route('/recipe', methods=['GET', 'POST'])
+def recipe():
     if request.method == 'POST':
         calories = float(request.form['calories'])
         fat = float(request.form['fat'])
