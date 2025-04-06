@@ -1,2210 +1,355 @@
+
 <!DOCTYPE html>
-<html>
-
+<html >
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="https://r.mobirisesite.com/1355740/assets/images/background1.jpg?rnd=1743527210309"
-        type="image/x-icon">
-    <meta name="description"
-        content="A recipe recommendation system that requires user authentication for personalized access to recipes and profiles, featuring a responsive design.">
-    <title>Recipe Recommendation System with User Login and Clean UI</title>
-    <link rel="stylesheet"
-        href="https://r.mobirisesite.com/1355740/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1743527210303">
-    <link rel="stylesheet"
-        href="https://r.mobirisesite.com/1355740/assets/bootstrap/css/bootstrap.min.css?rnd=1743527210303">
-    <link rel="stylesheet"
-        href="https://r.mobirisesite.com/1355740/assets/bootstrap/css/bootstrap-grid.min.css?rnd=1743527210303">
-    <link rel="stylesheet"
-        href="https://r.mobirisesite.com/1355740/assets/bootstrap/css/bootstrap-reboot.min.css?rnd=1743527210303">
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/parallax/jarallax.css?rnd=1743527210303">
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/dropdown/css/style.css?rnd=1743527210303">
-    <link rel="stylesheet"
-        href="https://r.mobirisesite.com/1355740/assets/smart-cart/minicart-theme.css?rnd=1743527210303">
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/socicon/css/styles.css?rnd=1743527210303">
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/theme/css/style.css?rnd=1743527210303">
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/recaptcha.css?rnd=1743527210303">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap&display=swap">
-    </noscript>
-    <link rel="stylesheet" href="https://r.mobirisesite.com/1355740/assets/css/mbr-additional.css?rnd=1743527210303"
-        type="text/css">
-
-
-
-
-
-
-    <style>
-        .navbar-fixed-top {
-            top: auto;
-        }
-
-        #mobirisePromo.container-banner {
-            height: 11rem;
-            opacity: 1;
-            -webkit-animation: 11s linear animationHeight;
-            -moz-animation: 11s linear animationHeight;
-            -o-animation: 11s linear animationHeight;
-            animation: 11s linear animationHeight;
-            transition: all 0.5s;
-        }
-
-        #mobirisePromo.container-banner.container-banner-closing {
-            pointer-events: none;
-            height: 0;
-            opacity: 0;
-            -webkit-animation: 0.5s linear animationClosing;
-            -moz-animation: 0.5s linear animationClosing;
-            -o-animation: 0.5s linear animationClosing;
-            animation: 0.5s linear animationClosing;
-        }
-
-        #mobirisePromo .banner {
-            min-height: 11rem;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            padding: 10px;
-            opacity: 1;
-            -webkit-animation: 11s linear animationBanner;
-            -moz-animation: 11s linear animationBanner;
-            -o-animation: 11s linear animationBanner;
-            animation: 11s linear animationBanner;
-            z-index: 1031;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        #mobirisePromo .banner p {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            animation: none;
-            visibility: visible;
-        }
-
-        #mobirisePromo .buy-license {
-            text-decoration: underline;
-        }
-
-        #mobirisePromo .banner .btn {
-            margin: 0.3rem 0.5rem;
-            animation: none;
-            visibility: visible;
-        }
-
-        .navbar.opened {
-            z-index: 1032;
-        }
-
-        #mobirisePromo .mbr-section-abuse-report {
-            margin-top: 0.8rem;
-            font-size: 80%;
-        }
-
-        #mobirisePromo .mbr-section-abuse-report a {
-            color: #aaa;
-        }
-
-        @-webkit-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            91% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-moz-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            91% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-o-keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            91% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @keyframes animationBanner {
-            0% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            91% {
-                opacity: 0;
-                top: -11rem;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-
-        @-webkit-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            91% {
-                height: 0;
-            }
-
-            100% {
-                height: 11rem;
-            }
-        }
-
-        @-moz-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            91% {
-                height: 0;
-            }
-
-            100% {
-                height: 11rem;
-            }
-        }
-
-        @-o-keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            91% {
-                height: 0;
-            }
-
-            100% {
-                height: 11rem;
-            }
-        }
-
-        @keyframes animationHeight {
-            0% {
-                height: 0;
-            }
-
-            91% {
-                height: 0;
-            }
-
-            100% {
-                height: 11rem;
-            }
-        }
-
-        @-webkit-keyframes animationClosing {
-            0% {
-                height: 11rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 11rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-moz-keyframes animationClosing {
-            0% {
-                height: 11rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 11rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @-o-keyframes animationClosing {
-            0% {
-                height: 11rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 11rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @keyframes animationClosing {
-            0% {
-                height: 11rem;
-                opacity: 1;
-            }
-
-            30% {
-                height: 11rem;
-                opacity: 0.5;
-            }
-
-            100% {
-                height: 0;
-                opacity: 0;
-            }
-        }
-
-        @media(max-width: 575px) {
-            #mobirisePromo.container-banner {
-                height: 14rem;
-            }
-
-            #mobirisePromo .banner {
-                min-height: 14rem;
-            }
-
-            @-webkit-keyframes animationBanner {
-                0% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                91% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                100% {
-                    opacity: 1;
-                    top: 0;
-                }
-            }
-
-            @-moz-keyframes animationBanner {
-                0% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                91% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                100% {
-                    opacity: 1;
-                    top: 0;
-                }
-            }
-
-            @-o-keyframes animationBanner {
-                0% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                91% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                100% {
-                    opacity: 1;
-                    top: 0;
-                }
-            }
-
-            @keyframes animationBanner {
-                0% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                91% {
-                    opacity: 0;
-                    top: -14rem;
-                }
-
-                100% {
-                    opacity: 1;
-                    top: 0;
-                }
-            }
-
-            @-webkit-keyframes animationHeight {
-                0% {
-                    height: 0;
-                }
-
-                91% {
-                    height: 0;
-                }
-
-                100% {
-                    height: 14rem;
-                }
-            }
-
-            @-moz-keyframes animationHeight {
-                0% {
-                    height: 0;
-                }
-
-                91% {
-                    height: 0;
-                }
-
-                100% {
-                    height: 14rem;
-                }
-            }
-
-            @-o-keyframes animationHeight {
-                0% {
-                    height: 0;
-                }
-
-                91% {
-                    height: 0;
-                }
-
-                100% {
-                    height: 14rem;
-                }
-            }
-
-            @keyframes animationHeight {
-                0% {
-                    height: 0;
-                }
-
-                91% {
-                    height: 0;
-                }
-
-                100% {
-                    height: 14rem;
-                }
-            }
-
-            @-webkit-keyframes animationClosing {
-                0% {
-                    height: 14rem;
-                    opacity: 1;
-                }
-
-                30% {
-                    height: 14rem;
-                    opacity: 0.5;
-                }
-
-                100% {
-                    height: 0;
-                    opacity: 0;
-                }
-            }
-
-            @-moz-keyframes animationClosing {
-                0% {
-                    height: 14rem;
-                    opacity: 1;
-                }
-
-                30% {
-                    height: 14rem;
-                    opacity: 0.5;
-                }
-
-                100% {
-                    height: 0;
-                    opacity: 0;
-                }
-            }
-
-            @-o-keyframes animationClosing {
-                0% {
-                    height: 14rem;
-                    opacity: 1;
-                }
-
-                30% {
-                    height: 14rem;
-                    opacity: 0.5;
-                }
-
-                100% {
-                    height: 0;
-                    opacity: 0;
-                }
-            }
-
-            @keyframes animationClosing {
-                0% {
-                    height: 14rem;
-                    opacity: 1;
-                }
-
-                30% {
-                    height: 14rem;
-                    opacity: 0.5;
-                }
-
-                100% {
-                    height: 0;
-                    opacity: 0;
-                }
-            }
-        }
-    </style>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="https://r.mobirisesite.com/1367732/assets/images/background1.jpg?rnd=1743781594508" type="image/x-icon">
+  <meta name="description" content="Find a variety of delicious recipes with easy navigation and appealing images. Perfect for cooking enthusiasts and beginners alike.">
+  <title>Delicious Recipes with Easy Navigation and Beautiful Images</title>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/bootstrap/css/bootstrap.min.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/bootstrap/css/bootstrap-grid.min.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/bootstrap/css/bootstrap-reboot.min.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/parallax/jarallax.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/dropdown/css/style.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/socicon/css/styles.css?rnd=1743781594506">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/theme/css/style.css?rnd=1743781594506">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/1367732/assets/css/mbr-additional.css?rnd=1743781594506" type="text/css">
+  
+  
+  
+  
+
+
+<style>
+.navbar-fixed-top {
+  top: auto;
+}
+#mobirisePromo.container-banner {
+  height: 11rem;
+  opacity: 1;
+  -webkit-animation: 11s linear animationHeight;
+  -moz-animation: 11s linear animationHeight;
+    -o-animation: 11s linear animationHeight;
+       animation: 11s linear animationHeight;
+       transition: all  0.5s;
+}
+#mobirisePromo.container-banner.container-banner-closing {
+  pointer-events: none;
+  height: 0;
+  opacity: 0;
+  -webkit-animation: 0.5s linear animationClosing;
+  -moz-animation:  0.5s linear animationClosing;
+    -o-animation:  0.5s linear animationClosing;
+       animation:  0.5s linear animationClosing;
+}
+#mobirisePromo .banner {
+  min-height: 11rem;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px;
+  opacity:1;
+  -webkit-animation: 11s linear animationBanner;
+  -moz-animation: 11s linear animationBanner;
+    -o-animation: 11s linear animationBanner;
+       animation: 11s linear animationBanner;
+  z-index: 1031;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mobirisePromo .banner p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  animation: none;
+  visibility: visible;
+}
+#mobirisePromo .buy-license {
+  text-decoration: underline;
+}
+#mobirisePromo .banner .btn {
+  margin: 0.3rem 0.5rem;
+  animation: none;
+  visibility: visible;
+}
+.navbar.opened {
+    z-index: 1032;
+}
+#mobirisePromo .mbr-section-abuse-report {
+  margin-top: 0.8rem;
+  font-size: 80%;
+}
+#mobirisePromo .mbr-section-abuse-report a {
+  color: #aaa;
+}
+@-webkit-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
+@-moz-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
+@-o-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
+   @keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
+@-webkit-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
+@-moz-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
+@-o-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
+   @keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
+
+@-webkit-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@-moz-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@-o-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+@keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+
+@media(max-width: 575px) {
+  #mobirisePromo.container-banner {
+    height: 14rem;
+  }
+  #mobirisePromo .banner {
+    min-height: 14rem;
+  }
+  @-webkit-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
+  @-moz-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
+  @-o-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
+    @keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
+  @-webkit-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
+  @-moz-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
+  @-o-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
+    @keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
+
+  @-webkit-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @-moz-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @-o-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+  @keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+}
+</style>
 </head>
-
 <body>
+<div class="container-banner" id="mobirisePromo">
+  <div class="banner align-center">
+    <button type="button" onclick="document.getElementById('mobirisePromo').classList.add('container-banner-closing')" class="btn-close" aria-label="Close" style="position: fixed;top: 16px;right: 16px;"></button>
+    <p class="mbr-text mbr-fonts-style display-7">The site was made with <a href="https://mobirise.com/builder/ai-website-builder.html" class="">Free AI Website Builder</a></p>
+    <div class="mbr-section-btn">
+      <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com/p/">Get AI Kit!</a>
+      <a class="btn btn-sm btn-secondary display-4" href="https://my.mobirise.com/buy.php?p=126&u=3905718&st=1367732&dm=1367732.mobirisesite.com">Remove This Banner</a>
+    </div>
+    <div class="mbr-section-abuse-report">
+      <a href="mailto:support@mobirise.com?subject=Mobirise Abuse Report 1367732.mobirisesite.com">Report Abuse</a>
+    </div>
+  </div>
+</div>
+  
+  <section data-bs-version="5.1" class="menu menu01 tradem5 cid-uHpFqx27U3" once="menu" id="menu-1-uHpFqx27U3">
+    
 
-    <section data-bs-version="5.1" class="menu menu01 tradem5 cid-uH8tNJ743M" once="menu" id="menu-1-uH8tNJ743M">
-
-
-        <div class="container">
-            <nav class="navbar navbar-dropdown navbar-expand-lg">
-                <div class="menu-container">
-                    <div class="navbar-brand">
-
-                        <span class="navbar-caption-wrap"><a class="navbar-caption display-7"
-                                href="#">RecipeHub</a></span>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
-                        data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                            <li class="nav-item">
-                                <a class="nav-link link display-4" href="#">Tasty Recipes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link display-4" href="#" aria-expanded="false">User Profiles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link display-4" href="#">Cooking Tips</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link display-4" href="#">Logout</a>
-                            </li>
-                        </ul>
-
-                        <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4"
-                            href="{{ url_for('login') }}">Get Started</a></div>
-                    </div>
+    <div class="container">
+        <nav class="navbar navbar-dropdown navbar-expand-lg">
+            <div class="menu-container">
+                <div class="navbar-brand">
+				
+                    <span class="navbar-caption-wrap"><a class="navbar-caption display-7" href="#">BitBuddy</a></span>
                 </div>
-            </nav>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="header02 tradem5 cid-uH8tNJ9JIb mbr-parallax-background"
-        id="hero-2-uH8tNJ9JIb">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 24, 20);"></div>
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="col-12 card">
-                    <div class="content-wrapper">
-                        <div class="image-wrapper">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/g23a551119f8777c09e4f0d8b5801-h_m8yqscox.jpg"
-                                alt="">
-                        </div>
-                        <h2 class="mbr-section-title mbr-fonts-style display-1">Welcome to RecipeHub!</h2>
-                        <div class="text-wrapper">
-                            <p class="mbr-text mbr-fonts-style display-4">Your culinary adventure begins here! Log in to
-                                access a world of delicious recipes, personalized profiles, and expert cooking tips. Get
-                                ready to spice up your kitchen and impress your taste buds!</p>
-                        </div>
-                        <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Join the Fun</a>
-                        </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="#">Main dishes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="#" aria-expanded="false">Popular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link display-4" href="#"></a>
+                        </li>
+                    </ul>
+                    
+                    <div class="navbar-buttons mbr-section-btn">
+                        <a class="btn btn-primary display-4" href="{{ url_for('login') }}">Get Cooking</a>
                     </div>
                 </div>
             </div>
+        </nav>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="header02 tradem5 cid-uHpFqx5x89 mbr-parallax-background" id="hero-2-uHpFqx5x89">
+    
+
+    
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(34, 10, 9);"></div>
+
+    <div class="container">
+        <div class="row items-wrap">
+            <div class="col-12 card">
+                <div class="content-wrapper">
+                    <div class="image-wrapper">
+                        <img src="https://r.mobirisesite.com/1367732/assets/images/photo-1504754524776-8f4f37790ca0.jpeg" alt="">
+                    </div>
+                    <h2 class="mbr-section-title mbr-fonts-style display-1">Burst of Flavor</h2>
+                    <div class="text-wrapper">
+                        <p class="mbr-text mbr-fonts-style display-4">Welcome to BitBuddy! Discover tasty recipes and cook amazing dishes. Let’s get started!
+
+
+
+
+
+
+
+
+</p>
+                    </div>
+                    <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Start Cooking Now</a></div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section data-bs-version="5.1" class="features01 tradem5 cid-uH8tNJanWY" id="features-1-uH8tNJanWY">
+<section data-bs-version="5.1" class="gallery tradem5 cid-uHpFqx543A" id="gallery-1-uHpFqx543A">
+    
 
+    
+    
 
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Why Choose Us?</h2>
-                        <p class="mbr-text mbr-fonts-style display-4">We make cooking exciting and easy!</p>
+    <div class="container">
+        <div class="row items-wrap">
+            <div class="item features-image col-12 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img card_1">
+                        <img src="https://r.mobirisesite.com/1367732/assets/images/photo-1490818387583-1baba5e638af.jpeg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="row items-wrap">
-                <div class="item features-image col-12 col-lg-3">
-                    <div class="item-wrapper">
-                        <div class="item-img">
-                            <div class="image-wrap">
-                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1497888329096-51c27beff665.jpeg"
-                                    alt="">
-                            </div>
-                            <p class="item-number mbr-fonts-style display-2">1</p>
-                        </div>
-                        <div class="border-wrap"></div>
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">Login Required</h4>
-                            <p class="item-text mbr-fonts-style display-4">Access exclusive recipes and features after
-                                logging in!</p>
-                        </div>
+            <div class="item features-image col-12 col-lg-7">
+                <div class="item-wrapper">
+                    <div class="item-img card_2">
+                        <img src="https://r.mobirisesite.com/1367732/assets/images/photo-1563379926898-05f4575a45d8.jpeg" alt="">
                     </div>
                 </div>
-                <div class="item features-image col-12 col-lg-3">
-                    <div class="item-wrapper">
-                        <div class="item-img">
-                            <div class="image-wrap">
-                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1475090169767-40ed8d18f67d.jpeg"
-                                    alt="">
-                            </div>
-                            <p class="item-number mbr-fonts-style display-2">2</p>
-                        </div>
-                        <div class="border-wrap"></div>
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">User Profiles</h4>
-                            <p class="item-text mbr-fonts-style display-4">Create and customize your own cooking
-                                profile!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-lg-3">
-                    <div class="item-wrapper">
-                        <div class="item-img">
-                            <div class="image-wrap">
-                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1496116218417-1a781b1c416c.jpeg"
-                                    alt="">
-                            </div>
-                            <p class="item-number mbr-fonts-style display-2">3</p>
-                        </div>
-                        <div class="border-wrap"></div>
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">Responsive Design</h4>
-                            <p class="item-text mbr-fonts-style display-4">Enjoy a seamless experience on any device!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-lg-3">
-                    <div class="item-wrapper">
-                        <div class="item-img">
-                            <div class="image-wrap">
-                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1470337458703-46ad1756a187.jpeg"
-                                    alt="">
-                            </div>
-                            <p class="item-number mbr-fonts-style display-2">4</p>
-                        </div>
-                        <div class="border-wrap"></div>
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">Cooking Tips</h4>
-                            <p class="item-text mbr-fonts-style display-4">Get expert advice to elevate your cooking
-                                game!</p>
-                        </div>
+            </div>
+            <div class="item features-image col-12 col-lg-10">
+                <div class="item-wrapper">
+                    <div class="item-img card_3">
+                        <img src="https://r.mobirisesite.com/1367732/assets/images/photo-1577303935007-0d306ee638cf.jpeg" alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section data-bs-version="5.1" class="image01 tradem5 cid-uH8tNJb5HO" id="image-1-uH8tNJb5HO">
+<section data-bs-version="5.1" class="pricing01 tradem5 cid-uHpFqx6LSz" id="pricing-cards-1-uHpFqx6LSz">
+    
 
+    
+    
 
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1455619452474-d2be8b1e70cd.jpeg"
-                            alt="">
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Recipe Plans</h2>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features02 tradem5 cid-uH8tNJbTQG" id="features-2-uH8tNJbTQG">
-
-
-
-
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="col-12 col-lg-5 card">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">What We Offer You</h2>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 card">
-                    <div class="items-wrapper">
-                        <div class="item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-content">
-                                    <h4 class="item-title mbr-fonts-style display-5">Delicious Recipes</h4>
-                                    <p class="item-text mbr-fonts-style display-4">Find recipes that will tantalize your
-                                        taste buds!</p>
-                                </div>
-                                <div class="item-img">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1543339308-43e59d6b73a6.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
+        <div class="row items-wrap">
+            <div class="item features-without-image col-12 col-lg-4">
+                <div class="item-wrapper card_1">
+                    <div class="item-content">
+                        <div class="title-wrap">
+                            <h4 class="item-title mbr-fonts-style display-7">Free</h4>
                         </div>
-                        <div class="item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-content">
-                                    <h4 class="item-title mbr-fonts-style display-5">Cooking Community</h4>
-                                    <p class="item-text mbr-fonts-style display-4">Join a community of passionate food
-                                        lovers!</p>
-                                </div>
-                                <div class="item-img">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1542838132-92c53300491e.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="gallery tradem5 cid-uH8tNJcxWe" id="gallery-1-uH8tNJcxWe">
-
-
-
-
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="item features-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="item-img card_1">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1562059390-a761a084768e.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-lg-7">
-                    <div class="item-wrapper">
-                        <div class="item-img card_2">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1505935428862-770b6f24f629.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-lg-10">
-                    <div class="item-wrapper">
-                        <div class="item-img card_3">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1499028344343-cd173ffc68a9.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features07 tradem5 cid-uH8tNJcSXL" id="features-7-uH8tNJcSXL">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">
-                            <strong sectiontitle="">Join the Fun!</strong>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper card_1">
-                        <div class="card-box">
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-5">Recipe Categories</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrapper">Appetizers</li>
-                                    <li class="tag-wrapper">Main Dishes</li>
-                                    <li class="tag-wrapper">Desserts</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper card_2">
-                        <div class="card-box">
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-5">User Features</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrapper">Profile Customization</li>
-                                    <li class="tag-wrapper">Recipe Sharing</li>
-                                    <li class="tag-wrapper">Cooking Challenges</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper card_3">
-                        <div class="card-box">
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-5">Support &amp; Help</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrapper">FAQs</li>
-                                    <li class="tag-wrapper">Contact Us</li>
-                                    <li class="tag-wrapper">Feedback</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features10 tradem5 cid-uH8tNJdaI1" id="features-11-uH8tNJdaI1">
-
-
-
-        <div class="container-fluid">
-
-            <div class="loop-container">
-                <div class="item display-1"
-                    data-linewords="Login to access delicious recipes * Responsive design for all devices * "
-                    data-direction="-1" data-speed="0.03"></div>
-                <div class="item display-1"
-                    data-linewords="Login to access delicious recipes * Responsive design for all devices * "
-                    data-direction="-1" data-speed="0.03"></div>
-            </div>
-
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="pricing01 tradem5 cid-uH8tNJdMsn" id="pricing-cards-1-uH8tNJdMsn">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Pricing Plans</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper card_1">
-                        <div class="item-content">
-                            <div class="title-wrap">
-                                <h4 class="item-title mbr-fonts-style display-7">Free</h4>
-                            </div>
-                            <p class="item-price mbr-fonts-style display-5">$0/month</p>
-                            <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Get Started</a>
-                            </div>
-                        </div>
-                        <div class="list-wrapper">
-                            <ul class="list mbr-fonts-style display-4">
-                                <li class="tag-wrap">Access to recipes</li>
-                                <li class="tag-wrap">User profile creation</li>
-                                <li class="tag-wrap">Basic support</li>
-                                <li class="tag-wrap">No ads</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper card_3">
-                        <div class="item-content">
-                            <div class="title-wrap">
-                                <h4 class="item-title mbr-fonts-style display-7">Ultimate</h4>
-                            </div>
-                            <p class="item-price mbr-fonts-style display-5">$20/month</p>
-                            <div class="mbr-section-btn">
-                                <a class="btn btn-primary display-4" href="#">Get Started</a>
-                            </div>
-                        </div>
-                        <div class="list-wrapper">
-                            <ul class="list mbr-fonts-style display-4">
-                                <li class="tag-wrap">All premium features</li>
-                                <li class="tag-wrap">Personalized recommendations</li>
-                                <li class="tag-wrap">Offline access</li>
-                                <li class="tag-wrap">Early access</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="article01 tradem5 cid-uH8tNJfpTq" id="generic-text-1-uH8tNJfpTq">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Welcome to Recipe Haven</h2>
-                        <div class="text-wrapper">
-                            <p class="mbr-text mbr-fonts-style display-4">Tired of the same old meals? Join us at Recipe
-                                Haven, where your taste buds will dance with joy! Log in to access a treasure trove of
-                                mouthwatering recipes and create your culinary masterpiece. Let's get cooking!</p>
-                        </div>
-                        <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Join Now</a></div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="tabs01 tabs tradem5 cid-uH8tNJgZzf" id="features-10-uH8tNJgZzf">
-
-
-
-
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="col-12 col-lg-6 card">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Why Choose Us?</h2>
-                        <div class="tabs-wrapper">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item first mbr-fonts-style"><a
-                                        class="nav-link show mbr-fonts-style active display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab0"
-                                        aria-selected="true">Delicious</a></li>
-                                <li class="nav-item"><a class="nav-link mbr-fonts-style display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab1"
-                                        aria-selected="false">User-Friendly</a></li>
-                                <li class="nav-item"><a class="nav-link mbr-fonts-style display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab2"
-                                        aria-selected="false">Responsive</a></li>
-                                <li class="nav-item"><a class="nav-link mbr-fonts-style display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab3"
-                                        aria-selected="false">Secure</a></li>
-                                <li class="nav-item"><a class="nav-link mbr-fonts-style display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab4"
-                                        aria-selected="false">Community</a></li>
-                                <li class="nav-item"><a class="nav-link mbr-fonts-style active display-4" role="tab"
-                                        data-toggle="tab" data-bs-toggle="tab" href="#tabs01-z_tab5"
-                                        aria-selected="true">Innovative</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 card">
-                    <div class="tab-content">
-                        <div id="tab1" class="tab-pane in active" role="tabpanel">
-                            <div class="item-content">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">Delicious</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Savor recipes that will make your
-                                            taste buds sing!</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1577303935007-0d306ee638cf.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab2" class="tab-pane" role="tabpanel">
-                            <div class="item-content ">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">User-Friendly</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Intuitive design for effortless
-                                            navigation.</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1490818387583-1baba5e638af.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab3" class="tab-pane" role="tabpanel">
-                            <div class="item-content ">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">Responsive</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Enjoy recipes on any device,
-                                            anytime!</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1432139555190-58524dae6a55.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab4" class="tab-pane" role="tabpanel">
-                            <div class="item-content ">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">Secure</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Your data is safe with us,
-                                            promise!</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1495195134817-aeb325a55b65.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab5" class="tab-pane" role="tabpanel">
-                            <div class="item-content ">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">Community</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Join a community of food lovers
-                                            and share!</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1490645935967-10de6ba17061.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab6" class="tab-pane" role="tabpanel">
-                            <div class="item-content ">
-                                <div class="text-wrapper">
-                                    <h4 class="item-title mbr-fonts-style display-5">Innovative</h4>
-                                    <div class="text-wrap">
-                                        <p class="item-text mbr-fonts-style display-4">Stay ahead with our cutting-edge
-                                            features.</p>
-                                    </div>
-                                </div>
-                                <div class="image-wrap">
-                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1504674900247-0877df9cc836.jpeg"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features06 tradem5 cid-uH8tNJhoii" id="features-6-uH8tNJhoii">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Key Features</h2>
-                        <p class="mbr-text mbr-fonts-style display-7">Everything you need for culinary success!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <div class="number-wrapper">
-                                <p class="item-number mbr-fonts-style display-7">1</p>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-7">Login Required</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrap">Secure access</li>
-                                    <li class="tag-wrap">Personalized experience</li>
-                                    <li class="tag-wrap">User profiles</li>
-                                </ul>
-                            </div>
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <div class="number-wrapper">
-                                <p class="item-number mbr-fonts-style display-7">2</p>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-7">Recipe Variety</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrap">Appetizers galore</li>
-                                    <li class="tag-wrap">Main courses</li>
-                                    <li class="tag-wrap">Desserts to die for</li>
-                                </ul>
-                            </div>
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <div class="number-wrapper">
-                                <p class="item-number mbr-fonts-style display-7">3</p>
-                            </div>
-                            <h4 class="item-title mbr-fonts-style display-7">Responsive Design</h4>
-                            <div class="tags-wrapper">
-                                <ul class="list mbr-fonts-style display-4">
-                                    <li class="tag-wrap">Mobile-friendly</li>
-                                    <li class="tag-wrap">Tablet optimized</li>
-                                    <li class="tag-wrap">Desktop ready</li>
-                                </ul>
-                            </div>
-                            <div class="icon-wrapper">
-                                <div class="icon-wrap">
-                                    <span class="mbr-iconfont mobi-mbri-success mobi-mbri"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="slider01 mbr-embla tradem5 cid-uH8tNJhH4m" id="gallery-2-uH8tNJhH4m">
-
-
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-
-                </div>
-                <div class="col-12">
-                    <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps"
-                        data-loop="true" data-auto-play="true" data-auto-play-interval="3" data-draggable="true">
-                        <div class="embla__viewport">
-                            <div class="embla__container">
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1476224203421-9ac39bcb3327.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1512621776951-a57141f2eefd.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1563379926898-05f4575a45d8.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1498837167922-ddd27525d352.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1606787366850-de6330128bfc.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1414235077428-338989a2e8c0.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1504754524776-8f4f37790ca0.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1515003197210-e0cd71810b5f.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1473093295043-cdd812d0e601.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1568901346375-23c9450c58cd.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 5px; margin-right: 5px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1493770348161-369560ae357d.jpeg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="embla__button embla__button--prev">
-                            <span class="mbr-iconfont mobi-mbri-left mobi-mbri" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
-                        </button>
-                        <button class="embla__button embla__button--next">
-                            <span class="mbr-iconfont mobi-mbri-right mobi-mbri" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features08 tradem5 cid-uH8tNJiWUW" id="features-8-uH8tNJiWUW">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Join the Fun!</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="item features-image col-12 col-lg-6">
-                    <div class="item-wrapper">
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">Login to Feast!</h4>
-                            <p class="item-text mbr-fonts-style display-4">Get ready to whip up some culinary magic!</p>
-                        </div>
-                        <div class="item-img">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1539136788836-5699e78bfc75.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-lg-6">
-                    <div class="item-wrapper">
-                        <div class="item-content">
-                            <h4 class="item-title mbr-fonts-style display-5">Share Your Creations!</h4>
-                            <p class="item-text mbr-fonts-style display-4">Show off your dishes and inspire others!</p>
-                        </div>
-                        <div class="item-img">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1496412705862-e0088f16f791.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features03 tradem5 cid-uH8tNJjYMw" id="features-3-uH8tNJjYMw">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Recipe Hub</h2>
-                        <div class="row items-wrap">
-                            <div class="item features-without-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="card-box">
-                                        <p class="item-number mbr-fonts-style display-4">1</p>
-
-                                        <p class="item-text mbr-fonts-style display-7">Login to access delicious recipes
-                                            and profiles.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-without-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="card-box">
-                                        <p class="item-number mbr-fonts-style display-4">2</p>
-
-                                        <p class="item-text mbr-fonts-style display-7">User-friendly interface for easy
-                                            navigation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-without-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="card-box">
-                                        <p class="item-number mbr-fonts-style display-4">3</p>
-
-                                        <p class="item-text mbr-fonts-style display-7">Responsive design for all
-                                            devices.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="pricing02 tradem5 cid-uH8tNJj6tu" id="product-list-1-uH8tNJj6tu">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Top Recipes</h2>
-                        <div class="row items-wrap">
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Pasta</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1494859802809-d069c3b71a8a.jpeg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <p class="item-price mbr-fonts-style display-7">$10</p>
-                                        <p class="item-text mbr-fonts-style display-4">Savor the taste of Italy with our
-                                            creamy pasta recipe!</p>
-                                        <div class="mbr-section-btn">
-                                            <a class="btn btn-primary display-4" href="#">Get Recipe</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Salad</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1497888329096-51c27beff665.jpeg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <p class="item-price mbr-fonts-style display-7">$8</p>
-                                        <p class="item-text mbr-fonts-style display-4">Fresh and crunchy salad to
-                                            brighten your day!</p>
-                                        <div class="mbr-section-btn">
-                                            <a class="btn btn-primary display-4" href="#">Get Recipe</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Cake</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1475090169767-40ed8d18f67d.jpeg"
-                                                alt="" data-slide-to="2" data-bs-slide-to="3">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <p class="item-price mbr-fonts-style display-7">$15</p>
-                                        <p class="item-text mbr-fonts-style display-4">Indulge in our rich chocolate
-                                            cake recipe!</p>
-                                        <div class="mbr-section-btn">
-                                            <a class="btn btn-primary display-4" href="#">Get Recipe</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features04 tradem5 cid-uH8tNJkaf4" id="features-4-uH8tNJkaf4">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Why Choose Us?</h2>
-                        <div class="row items-wrap">
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Easy Navigation</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1496116218417-1a781b1c416c.jpeg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <ul class="list mbr-fonts-style display-4">
-                                            <li class="item-wrap">Find recipes in a snap!</li>
-                                            <li class="item-wrap">User Profiles</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Personalized experience</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1470337458703-46ad1756a187.jpeg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <ul class="list mbr-fonts-style display-4">
-                                            <li class="item-wrap">Responsive Design</li>
-                                            <li class="item-wrap">Delicious Recipes</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-image col-12 col-lg-4">
-                                <div class="item-wrapper">
-                                    <div class="item-img">
-                                        <h4 class="item-title mbr-fonts-style display-5">Works on all devices</h4>
-                                        <div class="image-wrap">
-                                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1455619452474-d2be8b1e70cd.jpeg"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                    <div class="border-wrap"></div>
-                                    <div class="item-content">
-                                        <ul class="list mbr-fonts-style display-4">
-                                            <li class="item-wrap">New recipes every week!</li>
-                                            <li class="item-wrap">Community Feedback</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="#">Join Now</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="list01 tradem5 cid-uH8tNJle24" id="faq-1-uH8tNJle24">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Frequently Asked Questions</h2>
-                        <div id="bootstrap-accordion_18" class="panel-group accordionStyles accordion" role="tablist"
-                            aria-multiselectable="true">
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse1_18"
-                                        aria-expanded="false" aria-controls="collapse1">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">How do I log in?</h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse1_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingOne" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">Click the login button at the
-                                            top right corner, enter your credentials, and voilà! You're in!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingTwo">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse2_18"
-                                        aria-expanded="false" aria-controls="collapse2">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">Is it free to use?</h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse2_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingTwo" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">Absolutely! Enjoy all the
-                                            recipes without spending a dime. Who doesn't love free stuff?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingThree">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse3_18"
-                                        aria-expanded="false" aria-controls="collapse3">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">Can I save my favorites?
-                                        </h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse3_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingThree" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">Yes! Once logged in, you can
-                                            save your favorite recipes for easy access later. No more searching!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingFour">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse4_18"
-                                        aria-expanded="false" aria-controls="collapse4">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">What if I forget my
-                                            password?</h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse4_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingFour" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">Don't panic! Just click 'Forgot
-                                            Password' and follow the instructions. You'll be back in no time!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingFive">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse5_18"
-                                        aria-expanded="false" aria-controls="collapse5">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">Are there new recipes?
-                                        </h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse5_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingFive" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">You bet! We add new recipes
-                                            every week to keep your taste buds excited. Stay tuned!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingSix">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                        data-bs-toggle="collapse" data-core="" href="#collapse6_18"
-                                        aria-expanded="false" aria-controls="collapse6">
-                                        <h4 class="panel-title-edit mbr-fonts-style display-5">Can I share recipes?</h4>
-                                        <div class="icon-wrapper">
-                                            <span class="sign mbr-iconfont mobi-mbri-plus mobi-mbri"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div id="collapse6_18" class="panel-collapse noScroll collapse" role="tabpanel"
-                                    aria-labelledby="headingSix" data-parent="#accordion"
-                                    data-bs-parent="#bootstrap-accordion_18">
-                                    <div class="panel-body">
-                                        <p class="panel-text mbr-fonts-style display-4">Of course! Share your culinary
-                                            masterpieces with friends and family. Spread the love!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="article02 tradem5 cid-uH8tNJmlf7" id="generic-text-2-uH8tNJmlf7">
-
-
-
-
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="col-12 col-lg-6 card">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Join the Recipe Revolution!</h2>
-                        <div class="text-wrapper">
-                            <p class="mbr-text mbr-fonts-style display-4">Sign up today and start your culinary
-                                adventure. Delicious recipes await you, and trust us, your taste buds will thank you!
-                            </p>
-                        </div>
+                        <p class="item-price mbr-fonts-style display-5"> ₹0</p>
                         <div class="mbr-section-btn">
-                            <a class="btn btn-primary display-4" href="#">Sign Up</a>
+                            <a class="btn btn-primary display-4" href="#">Join Now</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="content-wrapper">
-                        <div class="image-wrapper">
-                            <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1543339308-43e59d6b73a6.jpeg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="slider02 mbr-embla tradem5 cid-uH8tNJmsbq" id="testimonials-1-uH8tNJmsbq">
-
-
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps"
-                        data-loop="true" data-auto-play="true" data-auto-play-interval="4" data-draggable="true">
-                        <div class="embla__viewport">
-                            <div class="embla__container">
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1589571894960-20bbe2828d0a.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-4">This site changed my
-                                                    cooking game!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Emily R.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Home Chef</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1679746584014-fb31d4eb0a5e.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-4">I found the best pasta
-                                                    recipe here!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Mike T.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Foodie</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1545803928-04e3f4cdd4ed.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-4">I love the variety of
-                                                    recipes!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Sarah L.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Baker</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1626899798511-c3eaacb02846.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-4">Finally, a site that gets
-                                                    me!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Tom H.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Culinary Enthusiast</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1692558588242-57cec1e32bba.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-5">My family loves the
-                                                    recipes!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Anna K.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Mom</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="embla__slide slider-image item"
-                                    style="margin-left: 8px; margin-right: 8px;">
-                                    <div class="slide-content">
-                                        <div class="item-wrapper">
-                                            <div class="item-img">
-                                                <div class="image-wrap">
-                                                    <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1497485692312-a26e1cc30f1d.jpeg"
-                                                        alt="">
-                                                </div>
-                                                <p class="item-text mbr-fonts-style display-4">I can't stop cooking!</p>
-                                            </div>
-                                            <div class="item-content">
-                                                <p class="item-name mbr-fonts-style display-7">Jake P.</p>
-                                                <p class="item-role mbr-fonts-style display-4">Food Lover</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="embla__button embla__button--prev">
-                            <span class="mbr-iconfont mobi-mbri-left mobi-mbri" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
-                        </button>
-                        <button class="embla__button embla__button--next">
-                            <span class="mbr-iconfont mobi-mbri-right mobi-mbri" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features05 tradem5 cid-uH8tNJn3lp" id="features-5-uH8tNJn3lp">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Recipe Recommendation Hub</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <h4 class="item-title mbr-fonts-style display-7">User Login</h4>
-                            <div class="text-wrapper">
-                                <p class="item-text mbr-fonts-style display-4">Secure your access with a simple login to
-                                    dive into deliciousness!</p>
-                                <div class="mbr-section-btn"><a class="btn btn-secondary display-4" href="#">Log In</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <h4 class="item-title mbr-fonts-style display-7">Explore Recipes</h4>
-                            <div class="text-wrapper">
-                                <p class="item-text mbr-fonts-style display-4">Once logged in, feast your eyes on a
-                                    smorgasbord of mouthwatering recipes!</p>
-                                <div class="mbr-section-btn">
-                                    <a class="btn btn-secondary display-4" href="#">Log In</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="card-box">
-                            <h4 class="item-title mbr-fonts-style display-7">User Profiles</h4>
-                            <div class="text-wrapper">
-                                <p class="item-text mbr-fonts-style display-4">Create and customize your profile to keep
-                                    track of your culinary adventures!</p>
-                                <div class="mbr-section-btn">
-                                    <a class="btn btn-secondary display-4" href="#">Log In</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="features09 tradem5 cid-uH8tNJtBX1" id="features-9-uH8tNJtBX1">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Why Join Us?</h2>
-                        <div class="row items-wrap">
-                            <div class="item features-without-image col-12 col-lg-3">
-                                <div class="item-wrapper card-mini">
-                                    <div class="card-box">
-                                        <div class="title-wrap">
-                                            <h4 class="item-title mbr-fonts-style display-4">Delicious Choices</h4>
-                                        </div>
-                                        <p class="item-text mbr-fonts-style display-4">A vast array of recipes to
-                                            satisfy every craving imaginable.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-without-image col-12 col-lg-3">
-                                <div class="item-wrapper card-mini">
-                                    <div class="card-box">
-                                        <div class="title-wrap">
-                                            <h4 class="item-title mbr-fonts-style display-4">Easy Navigation</h4>
-                                        </div>
-                                        <p class="item-text mbr-fonts-style display-4">Smooth and intuitive navigation
-                                            for a delightful user experience.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-without-image col-12 col-lg-3">
-                                <div class="item-wrapper card-mini">
-                                    <div class="card-box">
-                                        <div class="title-wrap">
-                                            <h4 class="item-title mbr-fonts-style display-4">Responsive Design</h4>
-                                        </div>
-                                        <p class="item-text mbr-fonts-style display-4">Enjoy a seamless experience on
-                                            any device, big or small.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item features-without-image col-12 col-lg-3">
-                                <div class="item-wrapper card-mini">
-                                    <div class="card-box">
-                                        <div class="title-wrap">
-                                            <h4 class="item-title mbr-fonts-style display-4">Community Support</h4>
-                                        </div>
-                                        <p class="item-text mbr-fonts-style display-4">Join a community of food lovers
-                                            sharing tips and tricks!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="gallery02 tradem5 cid-uH8tNJu1EV" id="gallery-3-uH8tNJu1EV">
-
-
-        <div class="container-fluid gallery-wrapper">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head">
-
-                    </div>
-                </div>
-            </div>
-            <div class="grid-container">
-                <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
-                    <div class="grid-item">
-                        <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1542838132-92c53300491e.jpeg"
-                            alt="">
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1562059390-a761a084768e.jpeg"
-                            alt="">
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1505935428862-770b6f24f629.jpeg"
-                            alt="">
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://r.mobirisesite.com/1355740/assets/images/photo-1499028344343-cd173ffc68a9.jpeg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="header02 tradem5 cid-uH8tNJEdIb mbr-fullscreen mbr-parallax-background"
-        id="image-2-uH8tNJEdIb">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="form01 tradem5 cid-uH8tNJF0C8" id="contact-form-1-uH8tNJF0C8">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Get in Touch with Us</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row items-wrap">
-                <div class="col-12 col-lg-6 card">
-                    <div class="content-wrapper">
-                        <div class="mbr-form form-wrapper" data-form-type="formoid">
-                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler"
-                                data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
-                                    value="ogjqxnD63Fy9UAGJ0ulVgJlqWkgdiXnp7sf95wXQEp5mWO6kxhuH3wWJQ3E1Wqb5RBYxJkeJE4Ha4jUlgXaAZqoHID9sxgfVb/vrcxo2RdwGQ+xE8ye/aDW8JcOV56Je">
-                                <div class="row">
-                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks
-                                        for
-                                        filling out the form!</div>
-                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                        Oops...! some problem!
-                                    </div>
-                                </div>
-                                <div class="dragArea row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="text">
-                                        <input type="text" name="text" placeholder="BITBUDDY" data-form-field="text"
-                                            class="form-control display-4" value="" id="text-contact-form-1-uH8tNJF0C8">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3 mb-3" data-for="number">
-                                        <input type="text" name="phone" placeholder="1234567890"
-                                            data-form-field="number" class="form-control display-4" value=""
-                                            id="phone-contact-form-1-uH8tNJF0C8">
-                                    </div>
-                                    <div data-for="email" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3 ">
-                                        <input type="email" name="email" placeholder="Bitbuddy@gmail.com"
-                                            data-form-field="email" class="form-control display-4" value=""
-                                            id="email-contact-form-1-uH8tNJF0C8">
-                                    </div>
-                                    <div data-for="textarea" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
-                                        <textarea name="textarea" placeholder="THANK YOU" data-form-field="textarea"
-                                            class="form-control display-4"
-                                            id="textarea-contact-form-1-uH8tNJF0C8"></textarea>
-                                    </div>
-                                    <div class="col mbr-section-btn"><button type="submit"
-                                            class="btn btn-primary display-4">Send Message</button></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 card">
-                    <div class="google-map"><iframe frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.0092751704!2d-74.14448674282774!3d40.69737092200535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sru!4v1697196791393!5m2!1sen!2sru"
-                            allowfullscreen=""></iframe></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="contacts02 tradem5 cid-uH8tNJIzRl" id="contacts-2-uH8tNJIzRl">
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="content-wrapper">
-                        <h2 class="mbr-section-title mbr-fonts-style display-2">Contact Information</h2>
-                        <ul class="list mbr-fonts-style display-5">
-                            <li class="item-wrap">support@reciperhub.com</li>
-                            <li class="item-wrap">+1-800-555-RECIPE</li>
-                            <li class="item-wrap">123 Culinary Lane, Food City, FC 12345</li>
-                        </ul>
-                        <div class="border-wrap"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="footer01 tradem5 cid-uH8tNJJquB" once="footers" id="footer-1-uH8tNJJquB">
-
-
-
-
-
-        <div class="container">
-            <div class="row items-wrap">
-                <div class="col-12 col-lg-6 card">
-                    <div class="title-wrapper">
-                        <a href="#">
-                            <h2 class="mbr-section-title mbr-fonts-style display-1">Quick Links</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 card">
-                    <div class="nav-wrapper">
+                    <div class="list-wrapper">
                         <ul class="list mbr-fonts-style display-4">
-                            <li class="item-wrap">Home</li>
-                            <li class="item-wrap">Recipes</li>
-                            <li class="item-wrap">Profile</li>
-                            <li class="item-wrap">Contact</li>
+                            <li class="tag-wrap">Access to Basics</li>
+                            <li class="tag-wrap">Simple Recipes</li>
+                            <li class="tag-wrap">Community Support</li>
+                            <li class="tag-wrap">Weekly Tips</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-12">
-                    <h2 class="mbr-copy mbr-fonts-style display-4">© 2025 Recipe Recommendation Hub. All rights
-                        reserved.</h2>
+            </div>
+            <div class="item features-without-image col-12 col-lg-4">
+                <div class="item-wrapper card_2">
+                    <div class="item-content">
+                        <div class="title-wrap">
+                            <h4 class="item-title mbr-fonts-style display-7">Premium</h4>
+                        </div>
+                        <p class="item-price mbr-fonts-style display-5"> ₹1000</p>
+                        <div class="mbr-section-btn">
+                            <a class="btn btn-primary display-4" href="#">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="list-wrapper">
+                        <ul class="list mbr-fonts-style display-4">
+                            <li class="tag-wrap">Exclusive Recipes</li>
+                            <li class="tag-wrap">Video Tutorials</li>
+                            <li class="tag-wrap">Personal Chef Tips</li>
+                            <li class="tag-wrap">Monthly Challenges</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="contacts02 tradem5 cid-uHpFqxm0vO" id="contacts-2-uHpFqxm0vO">
+    
+
+    
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style display-2">Contact Us </h2>
+                    <ul class="list mbr-fonts-style display-5">
+					<li class="item-wrap">info@BitBuddy.com</li>
+                    <li class="item-wrap">4545454545</li>
+                    <li class="item-wrap">18 DYPTC, Talegaon City, Maharashtra</li>
+				    </ul>
+                    <div class="border-wrap"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <script src="https://r.mobirisesite.com/1355740/assets/web/assets/jquery/jquery.min.js?rnd=1743527210303"></script>
-    <script
-        src="https://r.mobirisesite.com/1355740/assets/bootstrap/js/bootstrap.bundle.min.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/parallax/jarallax.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/smoothscroll/smooth-scroll.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/ytplayer/index.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/dropdown/js/navbar-dropdown.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/smart-cart/minicart.js?rnd=1743527210303"></script>
-    <script
-        src="https://r.mobirisesite.com/1355740/assets/smart-cart/minicart-customizer.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/mbr-tabs/mbr-tabs.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/embla/embla.min.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/embla/script.js?rnd=1743527210303"></script>
-    <script
-        src="https://r.mobirisesite.com/1355740/assets/mbr-switch-arrow/mbr-switch-arrow.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/scrollgallery/scroll-gallery.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/theme/js/script.js?rnd=1743527210303"></script>
-    <script src="https://r.mobirisesite.com/1355740/assets/formoid.min.js?rnd=1743527210303"></script>
-
-
-
+  <script src="https://r.mobirisesite.com/1367732/assets/web/assets/jquery/jquery.min.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/bootstrap/js/bootstrap.bundle.min.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/parallax/jarallax.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/smoothscroll/smooth-scroll.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/ytplayer/index.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/dropdown/js/navbar-dropdown.js?rnd=1743781594506"></script>
+  <script src="https://r.mobirisesite.com/1367732/assets/theme/js/script.js?rnd=1743781594506"></script>
+  
+  
+  
 
 </body>
-
 </html>
